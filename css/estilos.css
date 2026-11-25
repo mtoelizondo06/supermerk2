@@ -1,0 +1,86 @@
+/* Estilos basicos de la pagina */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+/* Barra de arriba */
+.encabezado {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 8px 15px;
+}
+.encabezado img { height: 40px; }
+.encabezado input { flex: 1; }
+
+/* Columna izquierda y contenido */
+.contenedor { display: flex; gap: 10px; margin: 10px; }
+.lateral { width: 220px; }
+.caja {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.principal {
+  flex: 1;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.menu a {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 12px;
+  padding: 6px 0;
+  margin-bottom: 4px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Formularios */
+input, select { padding: 5px; margin: 3px 0; }
+.lateral input { width: 95%; }
+button { background-color: #0071dc; color: white; border: none; padding: 7px 12px; border-radius: 5px; cursor: pointer; }
+button.rojo { background-color: #c62828; }
+.error { color: red; }
+.mensaje { background-color: #d9f7d9; padding: 10px; border: 1px solid green; }
+
+/* Productos */
+.producto { display: inline-block; width: 170px; border: 1px solid gray; padding: 8px; margin: 6px; text-align: center; vertical-align: top; }
+.producto img { width: 100%; }
+.precio { font-size: 18px; font-weight: bold; }
+.fila-carrito { border-bottom: 1px solid gray; padding: 8px 0; }
+.fila-carrito > * { vertical-align: middle; }
+
+/* Tablas */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border-bottom: 1px solid gray; padding: 6px; text-align: left; }
+th { background-color: #e6e6e6; }
+.bajo { color: red; font-weight: bold; }
+
+/* Pestanas del admin */
+.pestanas a { display: inline-block; border: 2px solid black; padding: 6px 12px; color: black; text-decoration: none; margin-right: 4px; }
+.pestanas a.activa { background-color: #ffc220; font-weight: bold; }
+.metrica { border: 2px solid black; border-radius: 8px; padding: 8px; margin-bottom: 10px; }
+.metrica b { display: block; font-size: 22px; }
+
+/* Version celular del repartidor */
+.celular { max-width: 400px; margin: 0 auto; background-color: white; min-height: 100vh; padding-bottom: 60px; }
+.celular .barra { background-color: #0071dc; color: white; padding: 12px; font-weight: bold; }
+.celular .contenido { padding: 12px; }
+.celular .tarjeta { border: 1px solid gray; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+.menu-celular { position: fixed; bottom: 0; width: 100%; max-width: 400px; background-color: white; border-top: 2px solid black; }
+.menu-celular a { display: inline-block; width: 32%; text-align: center; padding: 14px 0; color: black; text-decoration: none; }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario - SuperYa</title>
+  <link rel="stylesheet" href="../../css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="encabezado">
+    <a href="../catalogo.html"><img src="../../img/logo.jpg" alt="LOGO/MARCA"></a>
+    <input type="text" id="buscador" placeholder="Busqueda">
+    <button onclick="buscar('../catalogo.html')">Buscar</button>
+    <a href="../carrito.html">Carrito de compras</a>
+  </div>
+
+  <div class="contenedor">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="lateral">
+      <div class="caja">
+        <h3>Info Cliente</h3>
+        Nombre<br><input type="text" id="cliNombre"><br>
+        Apellidos<br><input type="text" id="cliApellidos"><br>
+        Correo electrónico<br><input type="email" id="cliCorreo"><br>
+        Contraseña<br><input type="password" id="cliClave"><br><br>
+        <button onclick="guardarCliente()">Guardar datos</button>
+      </div>
+      <div class="caja menu">
+        <h3>Menu/Opciones</h3>
+        <a href="../catalogo.html">Catálogo</a>
+        <a href="../carrito.html">Carrito</a>
+        <a href="../mis-pedidos.html">Mis pedidos</a>
+        <a href="../login.html">Ingresar</a>
+        <a href="../registro.html">Registro</a>
+        <a href="../admin/dashboard.html">Admin</a>
+        <a href="../admin/inventario.html">Inventario</a>
+        <a href="../repartidor/pedidos.html">Repartidor</a>
+        <a href="#" onclick="cerrarSesion('../login.html')">Salir</a>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="principal">
+      <h2>Panel de Administración</h2>
+      <div class="pestanas">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="usuarios.html">Usuarios</a>
+        <a href="ventas.html">Ventas</a>
+        <a href="inventario.html" class="activa">Inventario</a>
+      </div>
+      <h3>Control de inventario</h3>
+      <input type="text" id="buscarInv" placeholder="Buscar producto..." onkeyup="mostrarInventario()">
+      <table>
+        <tr><th>ID</th><th>Producto</th><th>Categoría</th><th>Stock</th><th>Estado</th><th>Acción</th></tr>
+        <tbody id="tabla"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../../js/datos.js"></script>
+  <script src="../../js/admin-inventario.js"></script>
+</body>
+</html>
